@@ -495,13 +495,7 @@ h2.page-title {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-vox-red); /* Red on hover */
-    box-shadow: 0 0 5px var(--color-vox-red);
-}
-
-/* Ensure interactive elements still show a pointer for usability */
-a:hover, button:hover, .cta-button:hover, 
-input:hover, select:hover, textarea:hover {
-    cursor: pointer; 
+    box-shadow: 0 0 5px var(--color-vox-red); 
 }
 /* ======================================= */
 /* --- ANTI-SELECTION: Content Control --- */
