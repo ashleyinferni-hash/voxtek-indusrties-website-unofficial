@@ -78,3 +78,12 @@ function showPrivacyPolicy(event) {
         "Thank you for joining the future. We're watching."
     );
 }
+// --- 3. VOXTEK CONTENT CONTROL: Disable Right-Click Menu ---
+
+document.addEventListener('contextmenu', function(e) {
+    // 1. Prevents the default right-click menu from appearing
+    e.preventDefault(); 
+    
+    // 2. Optional: Display an in-character warning message
+    alert("ACCESS DENIED: VoxTek content is proprietary. Don't try to steal the signal. Compliance is mandatory.");
+});
