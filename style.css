@@ -508,3 +508,25 @@ a:hover, button:hover, .cta-button:hover,
 input:hover, select:hover, textarea:hover {
     cursor: pointer; 
 }
+/* ======================================= */
+/* --- ANTI-SELECTION: Content Control --- */
+/* ======================================= */
+
+/* Apply to elements that contain sensitive propaganda/news that Vox wants locked down */
+.vox-quote, 
+.news-article, 
+.error-title,
+.fine-print {
+    /* Standard property */
+    user-select: none;
+    /* Vendor prefixes for broader browser compatibility */
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
+/* Optional: You can explicitly allow selection on specific elements if needed later */
+/* For example, if you had a contact form where text input must be allowed: */
+input, textarea {
+    user-select: text !important;
+}
