@@ -105,3 +105,44 @@ window.addEventListener('load', function() {
         loadingScreen.style.display = 'none';
     }
 });
+// --- VOXTEK DATA HARVESTING & PERSONALIZED ADS ---
+
+function runDataHarvesting() {
+    const banner = document.getElementById('ad-banner');
+    if (!banner) return; // Stop if the element isn't on this page
+
+    const savedObsession = localStorage.getItem('userObsession');
+
+    if (!savedObsession) {
+        // --- DATA HARVESTING: FIRST VISIT ---
+        
+        // Use a prompt to "harvest" data (ask a themed, invasive question)
+        const obsession = prompt(
+            "⚠️ VOXTEK PROMPT: System requires data acquisition for optimal signal delivery.\n\n" +
+            "In one word, what is your primary, overriding obsession in Hell?"
+        );
+
+        if (obsession && obsession.trim() !== '') {
+            const cleanedObsession = obsession.trim().toUpperCase();
+            localStorage.setItem('userObsession', cleanedObsession);
+            displayAd(banner, cleanedObsession);
+        } else {
+            // Default ad if user cancels or leaves blank
+            banner.textContent = "ATTENTION: Upgrade to VOX+ to avoid data acquisition prompts.";
+        }
+
+    } else {
+        // --- PERSONALIZED AD: SUBSEQUENT VISITS ---
+        displayAd(banner, savedObsession);
+    }
+}
+
+function displayAd(element, obsession) {
+    element.innerHTML = `
+        ⚡️ **VOX ADVERTISER NOTICE:** Data mining confirms your focus on **${obsession}**. 
+        Click now for exclusive deals related to **${obsession}**! 💸
+    `;
+}
+
+// Ensure the function runs when the page loads
+runDataHarvesting();
