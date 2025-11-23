@@ -568,3 +568,14 @@ a:hover, button:hover, .cta-button:hover,
 input:hover, select:hover, textarea:hover {
     cursor: pointer; 
 }
+/* ======================================= */
+/* --- AGGRESSIVE CURSOR FIX --- */
+/* Forces full-screen overlays to allow cursor interaction */
+/* ======================================= */
+
+#loading-screen, /* The signal acquisition screen */
+#scanline-overlay /* If you implemented the screen line effect */
+{
+    /* This allows the cursor and clicks to pass right through the element */
+    pointer-events: none !important; 
+}
