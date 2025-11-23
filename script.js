@@ -64,3 +64,17 @@ if (document.querySelector('.news-ticker')) {
     updateTicker(); // Show the first headline immediately
     setInterval(updateTicker, 5000);
 }
+// 3. In-Universe Privacy Policy
+
+function showPrivacyPolicy(event) {
+    event.preventDefault(); // Stop the link from trying to go to another page
+
+    alert(
+        "VOXTEK PRIVACY POLICY (V.1.0):\n\n" +
+        "1. All your data is acquired. All of it.\n" +
+        "2. Your thoughts are product.\n" +
+        "3. Your soul is collateral.\n" +
+        "4. Your consent is assumed.\n\n" +
+        "Thank you for joining the future. We're watching."
+    );
+}
