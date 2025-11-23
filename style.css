@@ -555,12 +555,12 @@ input, textarea {
     color: var(--color-vox-red);
     animation: flicker 0.5s infinite alternate; /* Reuse existing flicker keyframe */
 }
-/* --- Themed Fallback Cursor (Always Visible) --- */
-body {
-    /* Use 'wait' or 'progress' to mimic a constantly loading/acquiring signal */
-    cursor: wait; 
-    /* Alternatively, use 'progress' */
-    /* cursor: progress; */
+/* --- Force the Cursor to Appear --- */
+.vox-bg, body {
+    /* ... (other body styles) ... */
+    
+    /* FORCE THE CURSOR PROPERTY */
+    cursor: wait !important; 
 }
 
 /* Keep the interactive cursor pointer */
