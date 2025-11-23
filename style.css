@@ -412,3 +412,43 @@ h2.page-title {
     background-color: rgba(255, 51, 51, 0.1); 
     border-color: var(--color-vox-red) !important;
 }
+/* --- Vees Panel Image Styling --- */
+.vee-image {
+    width: 100%; /* Take up the full width of the panel */
+    max-width: 200px; /* Cap the max size to keep it clean */
+    height: auto;
+    display: block; /* Ensures it sits on its own line */
+    margin: 15px auto; /* Centers the image */
+    
+    /* Add a high-tech border and shadow */
+    border: 3px solid var(--color-vox-blue);
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0, 224, 255, 0.4);
+    
+    /* Give it a slight distortion to match the vibe */
+    transform: skewX(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.vee-image:hover {
+    transform: skewX(0) scale(1.05);
+    box-shadow: 0 0 20px var(--color-vox-red);
+}
+
+/* Specific color adjustments for each panel image */
+#panel-valentino .vee-image {
+    border-color: var(--color-vox-red);
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+}
+
+#panel-velvette .vee-image {
+    border-color: var(--color-text-light);
+    box-shadow: 0 0 15px rgba(240, 240, 240, 0.4);
+}
+
+/* Ensure images scale down for mobile */
+@media (max-width: 768px) {
+    .vee-image {
+        max-width: 150px;
+    }
+}
