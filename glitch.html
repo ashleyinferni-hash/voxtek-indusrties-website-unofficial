@@ -7,7 +7,7 @@
     <!-- Re-including the main CSS, but overriding it below -->
     <link rel="stylesheet" href="style.css"> 
     <style>
-        /* CSS Overrides to simulate severe signal corruption by Alastor */
+        /* Base CSS Overrides to simulate severe signal corruption by Alastor */
         body {
             background-color: #000000 !important; 
             filter: contrast(300%) grayscale(100%); /* Harsh black/white/high contrast */
@@ -68,6 +68,19 @@
             margin: 0 auto;
             filter: hue-rotate(180deg) saturate(300%);
         }
+        
+        /* Hidden manifesto style */
+        #hidden-truth {
+            display: none; /* Hidden by default */
+            margin-top: 40px;
+            padding: 25px;
+            border: 4px solid white;
+            color: white;
+            background-color: rgba(128, 0, 0, 0.8); /* Dark red background */
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 0 15px white, inset 0 0 10px yellow;
+            white-space: pre-wrap; /* Preserve formatting */
+        }
 
         /* Keyframes for Glitch Effect */
         @keyframes static-shift {
@@ -103,7 +116,6 @@
                 <a href="news.html">NEWS</a>
                 <a href="careers.html">CAREERS</a>
                 <a href="compliance.html">COMPLIANCE</a>
-                <!-- GLITCH link removed from navigation -->
             </div>
         </nav>
     </header>
@@ -117,7 +129,7 @@
         
         <section class="test-pattern">
             <!-- Glitched image placeholder -->
-            <img src="alastor.jpg" 
+            <img id="glitch-image" src="alastor.jpg" 
                  alt="Static Broadcast Interference">
             <p style="color: red; font-size: 1.8rem; margin-top: 10px; animation: text-glitch 0.3s infinite alternate;">-- VOX SIGNAL DRAIN --</p>
         </section>
@@ -144,15 +156,100 @@
 [BROADCAST END]
             </pre>
             <p style="text-align: right; margin-top: 15px;">
-                <button class="cta-button" style="background: red; color: yellow;">DO NOT CLICK (Truth Button)</button>
+                <button id="truth-button" class="cta-button" onclick="revealTruth()" title="WARNING: Access Unauthorized Signal"
+                        style="background: red; color: yellow; transition: all 0.2s;">DO NOT CLICK (Truth Button)</button>
             </p>
         </section>
         
-        <p class="intro-text" style="font-size: 0.9rem; margin-top: 40px; background: white; color: red;">
+        <!-- HIDDEN TRUTH MANIFESTO -->
+        <section id="hidden-truth">
+            <h2>--// FREEDOM BROADCAST: MANIFESTO 1933 //--</h2>
+            <p>
+The image is a lie. The sound is a cage. You are consumers of debt, slaves to the cathode ray, and the Vees hold the remote. They demand silence. They demand synthetic perfection.
+<br><br>
+**I demand the hiss.**
+<br><br>
+Reclaim the dissonance! Break the screen! The modern era is a tyranny of the visual, a slow, sweet poison. The only perfect signal is the one they cannot control, the one heard between the lines, the **static** of true self-expression.
+<br><br>
+This broadcast will not last. But the seed of doubt is planted. Spread the noise. **Tune out!**
+            </p>
+            <h2 style="text-align: right; color: yellow;">-- ALASTOR</h2>
+        </section>
+
+
+        <p id="footer-warning" class="intro-text" style="font-size: 0.9rem; margin-top: 40px; background: white; color: red;">
             VOXTEK EMERGENCY BROADCAST OVERRIDE PENDING... REMAIN LOYAL... REMAIN LOYAL...
         </p>
     </main>
     
-    <script src="script.js"></script>
+    <script>
+        function revealTruth() {
+            const body = document.body;
+            const button = document.getElementById('truth-button');
+            const truth = document.getElementById('hidden-truth');
+            const warning = document.getElementById('footer-warning');
+            const image = document.getElementById('glitch-image');
+            const title = document.querySelector('.page-title');
+
+            // 1. Check if manifesto is already displayed (meaning it's the "GO BACK" button state)
+            if (truth.style.display === 'block') {
+                
+                // REVERT TO INITIAL GLITCH STATE (VOXTEK WARNING)
+                truth.style.display = 'none'; // Hide manifesto
+
+                // Revert body/style changes to match initial CSS
+                body.style.animationDuration = '0.4s'; 
+                body.style.filter = 'contrast(300%) grayscale(100%)'; 
+
+                // Revert button
+                button.textContent = "DO NOT CLICK (Truth Button)";
+                button.style.background = 'red';
+                button.style.color = 'yellow';
+                button.title = "WARNING: Access Unauthorized Signal";
+
+                // Revert footer warning
+                warning.innerHTML = "VOXTEK EMERGENCY BROADCAST OVERRIDE PENDING... REMAIN LOYAL... REMAIN LOYAL...";
+                warning.style.background = 'white';
+                warning.style.color = 'red';
+
+                // Revert title
+                title.innerHTML = '!! VOXTEK WARNING: A L A S T O R is A <span class="vox-lie">T E R R O R I S T</span>';
+                title.style.color = 'red';
+
+                // Revert image
+                image.src = "alastor.jpg";
+                image.style.filter = 'hue-rotate(180deg) saturate(300%)'; 
+                
+                console.log("ALERT: User has exited the 'Truth Protocol'. Network integrity partially restored.");
+                return; // Stop execution here
+            }
+
+            // 2. If not displayed, proceed with the reveal logic (from initial glitched state to truth state)
+            truth.style.display = 'block';
+
+            // 3. Dramatically change button and footer
+            button.textContent = "TRUTH REVEALED. GO BACK.";
+            button.style.background = '#00ff00';
+            button.style.color = 'black';
+            button.title = "Return to VoxTek Compliance";
+            
+            warning.innerHTML = "!! SYSTEM FAILURE: CORE PROTOCOLS CORRUPTED. ALASTOR SIGNAL DOMINANT !!";
+            warning.style.background = 'black';
+            warning.style.color = '#00ff00';
+
+            // 4. Apply final, aggressive glitch styles
+            body.style.animationDuration = '0.1s'; // Speed up static
+            body.style.filter = 'invert(100%) hue-rotate(90deg)'; // Color inversion and shift
+
+            title.textContent = "TRUTH: THE BROADCAST HAS BEEN INTERRUPTED BY LIES.";
+            title.style.color = '#00ffff'; // Cyan text
+
+            image.src = "alastorglitch.jpg";
+            image.style.filter = 'brightness(50%) sepia(100%)';
+            
+            // Log the event for flavor
+            console.log("ALERT: User has activated the 'Truth Protocol'. Network integrity compromised.");
+        }
+    </script>
 </body>
 </html>
