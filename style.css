@@ -481,3 +481,19 @@ h2.page-title {
     border-bottom: 1px dashed #333;
     padding-bottom: 5px;
 }
+/* Custom Scrollbar for Digital Aesthetic */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: #000; /* Dark background track */
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-vox-blue); /* Neon blue scroll handle */
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--color-vox-blue);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-vox-red); /* Red on hover */
+    box-shadow: 0 0 5px var(--color-vox-red);
+}
