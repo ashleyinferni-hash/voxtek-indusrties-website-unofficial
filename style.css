@@ -539,21 +539,35 @@ input, textarea {
     transition: opacity 1.5s ease-out; /* Fade out transition */
 }
 
-/* Static Effect (Red/Black Repeating Lines) */
-.signal-fail {
-    background: repeating-linear-gradient(
-        90deg,
-        rgba(255, 0, 0, 0.2), 
-        rgba(255, 0, 0, 0.2) 2px,
-        #000000 2px,
-        #000000 4px
-    );
+/* --- Custom Cursor Image URL (Ensure this path is correct!) --- */
+/* Example Path: url('reticle.png') 16 16 */
+/* Replace 'url(...)' with your actual image path/filename. */
+:root {
+    /* Define the custom cursor URL as a CSS variable for easy reuse */
+    --cursor-reticle: url('reticle.png') 16 16, wait; 
+    --cursor-reticle-pointer: url('reticle.png') 16 16, pointer;
 }
 
-.loading-logo {
-    font-size: 5em;
-    color: var(--color-vox-red);
-    animation: flicker 0.5s infinite alternate; /* Reuse existing flicker keyframe */
+/* 1. Apply Reticle to the entire body */
+.vox-bg, body {
+    cursor: var(--cursor-reticle);
+}
+
+/* 2. THE OVERRIDE FIX: Apply the Reticle to ALL elements when they are interactive */
+/* We target EVERYTHING (*) on the page when hovering, and ensure the reticle is used. */
+*:hover {
+    /* Set the cursor to the Reticle for all hover states */
+    cursor: var(--cursor-reticle); 
+}
+
+/* 3. EXCEPTION: Force the hand icon to use the Reticle image */
+a:hover, 
+button:hover, 
+.cta-button:hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover {
+    /* Use the reticle, but fall back to the pointer type */
+    cursor: var(--cursor-reticle-pointer);
 }
 /* --- Final Custom Cursor Implementation --- */
 .vox-bg, body {
