@@ -599,3 +599,29 @@ input, textarea {
     0% { opacity: 0.9; transform: skewX(0deg); }
     100% { opacity: 0.95; transform: skewX(0.5deg); } /* Slight digital skew */
 }
+/* ======================================= */
+/* --- SCAN LINE EFFECT (CRT MONITOR AESTHETIC) --- */
+/* ======================================= */
+
+#scanline-overlay {
+    position: fixed; /* Fixes it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Creates the horizontal lines using a repeating gradient */
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,         /* Start transparent at 0px */
+        transparent 1px,         /* Stay transparent until 1px */
+        rgba(0, 0, 0, 0.1) 1px,  /* Draw a dark, subtle line at 1px */
+        rgba(0, 0, 0, 0.15) 2px  /* End the line at 2px, making it 1px thick */
+    );
+    
+    pointer-events: none; /* CRUCIAL: Allows clicks and the cursor to pass through */
+    z-index: 999; 
+    
+    /* Use a blending mode to make the lines interact with the content color */
+    mix-blend-mode: overlay; 
+}
