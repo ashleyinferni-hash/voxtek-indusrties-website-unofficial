@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOXTEK PRODUCTS: Acquisition is Mandatory.</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for product cards and grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background-color: var(--color-dark-bg);
+            border: 2px solid var(--color-primary-neon);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px var(--color-tertiary-neon);
+        }
+
+        .product-card h4 {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 5px;
+            text-shadow: 0 0 5px var(--color-primary-neon);
+        }
+
+        .product-card .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--color-accent-up); /* Use the price-up color for positive emphasis */
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product-card .category {
+            font-style: italic;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Specific Overlord styling hints */
+        .vox-card { border-color: var(--color-primary-neon); }
+        .valentino-card { border-color: var(--color-accent-down); }
+        .velvette-card { border-color: var(--color-tertiary-neon); }
+        .corp-card { border-color: #666; }
+    </style>
+</head>
+<body class="vox-bg">
+    <!-- Structural Overlays -->
+    <div id="scanline-overlay"></div>
+    <div id="noise-overlay"></div>
+    
+    <header>
+        <nav class="header-nav">
+            <a href="index.html" class="logo">VOXTEK</a>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="vees.html">THE VEES</a>
+                <a href="news.html">NEWS</a>
+                <a href="compliance.html">COMPLIANCE</a>
+                <a href="products.html" class="active">PRODUCTS</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h2 class="page-title price-up">MANDATORY PRODUCTS CATALOG</h2>
+        <p class="intro-text">
+            Acquisition of all listed assets is strictly required for optimal integration into the VoxTek Network. Prices are non-negotiable and loyalty is the only currency accepted.
+        </p>
+
+        <div class="product-grid">
+
+            <!-- VOX PRODUCTS -->
+            <div class="product-card vox-card">
+                <h4>The Global Broadcast</h4>
+                <p class="category">VOX: Digital Media Control</p>
+                <p class="price">PRICE: FREE (MANDATORY)</p>
+                <p>Continuous media consumption across all platforms. Non-negotiable viewing.</p>
+                <a href="vision.html" class="cta-button">TUNE IN NOW</a>
+            </div>
+            
+            <div class="product-card vox-card">
+                <h4>Compliance Check</h4>
+                <p class="category">VOX: Security & Monitoring</p>
+                <p class="price">PRICE: N/A (Embedded System Cost)</p>
+                <p>Automatic system monitoring for user compliance and loyalty tracking.</p>
+                <a href="compliance.html" class="cta-button">VIEW PROTOCOLS</a>
+            </div>
+
+            <div class="product-card vox-card">
+                <h4>Broadcast Metrics Data</h4>
+                <p class="category">VOX: Monitoring Data</p>
+                <p class="price">PRICE: 10,000 VOID COIN (VCN)</p>
+                <p>Raw monitoring data (for internal management use only).</p>
+                <a href="vox.html" class="cta-button">ACCESS HUB</a>
+            </div>
+
+            <!-- VALENTINO PRODUCTS -->
+            <div class="product-card valentino-card">
+                <h4>VOX'S UNCUT ADDRESS</h4>
+                <p class="category">VALENTINO: Exclusive Sinema</p>
+                <p class="price">PRICE: 666 SOULS</p>
+                <p>A lengthy, rentable broadcast. Eternal contract terms apply.</p>
+                <a href="valentino.html" class="cta-button">RENT / ACQUIRE</a>
+            </div>
+
+            <div class="product-card valentino-card">
+                <h4>THE DEBT COLLECTOR (Series)</h4>
+                <p class="category">VALENTINO: Featured Program</p>
+                <p class="price">PRICE: 200 SOULS</p>
+                <p>Mandatory series premiere starring anonymous, indebted assets.</p>
+                <a href="valentino.html" class="cta-button">STREAM NOW</a>
+            </div>
+            
+            <div class="product-card valentino-card">
+                <h4>"Debt is Forever" (Sinema Classic)</h4>
+                <p class="category">VALENTINO: Re-Watch Content</p>
+                <p class="price">PRICE: 100 SOULS (Per Re-watch)</p>
+                <p>An eternal contract thriller. Mandatory re-watch programming.</p>
+                <a href="vision.html" class="cta-button">VIEW NOW</a>
+            </div>
+
+            <!-- VELVETTE PRODUCTS -->
+            <div class="product-card velvette-card">
+                <h4>INFLUENCE DRIP: VELVETTE EYEWEAR</h4>
+                <p class="category">VELVETTE: Physical Goods</p>
+                <p class="price">PRICE: 1,500 SOULS</p>
+                <p>Mandatory pre-order fashion accessory. Irrelevant if you don't own it.</p>
+                <a href="velvette.html" class="cta-button">PURCHASE (NO REFUNDS)</a>
+            </div>
+            
+            <div class="product-card velvette-card">
+                <h4>DIGITAL COLLATERAL: NF-TRENDS</h4>
+                <p class="category">VELVETTE: Digital Assets</p>
+                <p class="price">PRICE: 5,000 SOULS+ (VOLATILE)</p>
+                <p>Exclusive, verified assets for social clout. Price fluctuates based on trend metrics.</p>
+                <a href="velvette.html" class="cta-button">BUY NOW / ETERNAL VALUE</a>
+            </div>
+
+            <div class="product-card velvette-card">
+                <h4>"The Perfect Selfie" (Tutorial)</h4>
+                <p class="category">VELVETTE: Educational Content</p>
+                <p class="price">PRICE: 50 SOULS (Fee)</p>
+                <p>A streaming tutorial on mandatory consumption and trend adherence.</p>
+                <a href="vision.html" class="cta-button">ACCESS TUTORIAL</a>
+            </div>
+
+            <!-- CORPORATE/CAREER PRODUCTS (Contracts are also "products") -->
+            <div class="product-card corp-card">
+                <h4>Digital Content Curator Contract</h4>
+                <p class="category">VOXTEK: Employment Asset</p>
+                <p class="price">PRICE: ETERNAL CONTRACT</p>
+                <p>A role ensuring 100% compliance with VOX's narrative.</p>
+                <a href="careers.html" class="cta-button">SIGN NOW</a>
+            </div>
+            
+            <div class="product-card corp-card">
+                <h4>SOUL FUTURES (SLF)</h4>
+                <p class="category">VOXTEK: Financial Instrument</p>
+                <p class="price">PRICE: 1 SOUL = 1 SOUL (Guaranteed)</p>
+                <p>High-growth financial instrument based on mandatory soul value.</p>
+                <a href="economy.html" class="cta-button">INVEST NOW</a>
+            </div>
+            
+            <div class="product-card corp-card">
+                <h4>VOID COIN (VCN)</h4>
+                <p class="category">VOXTEK: Currency Asset</p>
+                <p class="price">PRICE: VOLATILE (▼ 0.000666 SOULS)</p>
+                <p>A highly unstable cryptocurrency for internal network transactions.</p>
+                <a href="economy.html" class="cta-button">ACCESS EXCHANGE</a>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="vox-notification-center">
+        <div class="header">VOX OS | System Status: ONLINE</div>
+        <div id="vox-notification-message" class="message">Compliance Check: All systems nominal.</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
