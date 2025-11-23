@@ -593,3 +593,26 @@ input:hover, select:hover, textarea:hover {
     /* This allows the cursor and clicks to pass right through the element */
     pointer-events: none !important; 
 }
+/* --- Personalized Ad Banner Style --- */
+.ad-banner {
+    /* Make it stand out with high contrast */
+    background-color: var(--color-vox-red); 
+    color: var(--color-text-dark); /* Black text */
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    border: 3px solid var(--color-vox-dark);
+    /* Make it flash slightly to demand attention */
+    animation: ad-pulse 1s infinite alternate;
+}
+
+@keyframes ad-pulse {
+    from { 
+        box-shadow: 0 0 5px rgba(255, 51, 51, 0.5); 
+    }
+    to { 
+        box-shadow: 0 0 10px rgba(255, 51, 51, 1.0); 
+    }
+}
