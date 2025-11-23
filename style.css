@@ -544,8 +544,8 @@ input, textarea {
 /* Replace 'url(...)' with your actual image path/filename. */
 :root {
     /* Define the custom cursor URL as a CSS variable for easy reuse */
-    --cursor-reticle: url('reticle.png') 16 16, wait; 
-    --cursor-reticle-pointer: url('reticle.png') 16 16, pointer;
+    --cursor-reticle: url('reticle.cur') 16 16, wait; 
+    --cursor-reticle-pointer: url('reticle.cur') 16 16, pointer;
 }
 
 /* 1. Apply Reticle to the entire body */
@@ -572,14 +572,14 @@ input[type="button"]:hover {
 /* --- Final Custom Cursor Implementation --- */
 .vox-bg, body {
     /* Uses the reticle image for the general page area */
-    cursor: url('reticle.png') 16 16, wait; 
+    cursor: url('reticle.cur') 16 16, wait; 
 }
 
 /* --- THE FIX: Force the custom image onto all interactive elements --- */
 a:hover, button:hover, .cta-button:hover, 
 input:hover, select:hover, textarea:hover {
     /* Use the same custom image, but add 'pointer' as the fallback type. */
-    cursor: url('reticle.png') 16 16, pointer; 
+    cursor: url('reticle.cur') 16 16, pointer; 
 } 
 }
 /* ======================================= */
