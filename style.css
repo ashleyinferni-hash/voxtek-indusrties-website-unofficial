@@ -333,3 +333,72 @@ h2.page-title {
     color: var(--color-text-light);
     font-family: var(--font-digital);
 }
+/* ======================================= */
+/* --- 5. MOBILE RESPONSIVENESS (Max Width 768px) --- */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    
+    /* Global Adjustments */
+    .header-nav {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        padding: 10px 5%;
+        position: static; /* Unfix the header on mobile to save screen space */
+    }
+
+    .vox-bg {
+        padding-top: 0; /* Remove padding since header is no longer fixed */
+    }
+
+    .header-nav nav {
+        margin-top: 10px;
+        display: flex; /* Keep links inline */
+        flex-wrap: wrap; /* Allow links to wrap if they don't fit */
+        justify-content: center;
+    }
+
+    .header-nav nav a {
+        padding: 6px 10px;
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    .main-content {
+        padding: 10px; /* Reduce main content padding */
+        margin: 20px auto;
+    }
+
+    /* Headings and Text */
+    h2.page-title {
+        font-size: 2em;
+    }
+
+    /* ---------------------------------- */
+    /* 2. The Vees Page (vees.html) */
+    /* ---------------------------------- */
+
+    .vees-triptych {
+        flex-direction: column; /* This is the key change: stack the three Vees panels */
+    }
+
+    .vee-panel {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    /* ---------------------------------- */
+    /* 3. Rivalry Page (static.html) */
+    /* ---------------------------------- */
+    
+    .signal-icon {
+        width: 90%; /* Make the signal icon wider on mobile */
+        font-size: 1.2em;
+    }
+
+    /* ---------------------------------- */
+    /* 4. Compliance Page (compliance.html) */
+    /* ---------------------------------- */
+    .corporate-page .main-content {
+        padding: 20px;
+    }
+}
