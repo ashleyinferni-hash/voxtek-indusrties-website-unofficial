@@ -572,3 +572,30 @@ input, textarea {
         box-shadow: 0 0 10px rgba(255, 51, 51, 1.0); 
     }
 }
+/* Style for the Redacted Text */
+.redact {
+    position: relative;
+    color: transparent !important; /* Make the actual text invisible */
+    font-style: italic;
+    background-color: transparent !important;
+}
+
+/* Create the Redaction Bar using a Pseudo-element */
+.redact::before {
+    content: ''; /* Must have content, even if empty */
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: calc(100% + 4px); /* Make it slightly wider than the text */
+    height: 100%;
+    background-color: var(--color-vox-red); /* The censoring bar */
+    z-index: 10;
+    
+    /* Make the censorship flicker */
+    animation: censor-flicker 0.3s infinite alternate;
+}
+
+@keyframes censor-flicker {
+    0% { opacity: 0.9; transform: skewX(0deg); }
+    100% { opacity: 0.95; transform: skewX(0.5deg); } /* Slight digital skew */
+}
