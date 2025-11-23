@@ -143,6 +143,20 @@ function displayAd(element, obsession) {
         Click now for exclusive deals related to **${obsession}**! 💸
     `;
 }
+// --- VOXTEK SLOGAN MANIPULATOR (Invasive Branding) ---
 
-// Ensure the function runs when the page loads
-runDataHarvesting();
+// Store the original title of the document
+const originalTitle = document.title;
+// CORRECTED SLOGAN
+const voxSlogan = " | VOXTEK: trust us with your everything"; 
+
+document.addEventListener('visibilitychange', function() {
+    // Check if the document (tab) is hidden
+    if (document.hidden) {
+        // If the user switches away, enforce the correct slogan
+        document.title = originalTitle + voxSlogan;
+    } else {
+        // If the user switches back, revert to the original, more informative title
+        document.title = originalTitle;
+    }
+});
