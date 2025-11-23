@@ -530,3 +530,39 @@ input:hover, select:hover, textarea:hover {
 input, textarea {
     user-select: text !important;
 }
+/* ======================================= */
+/* --- SIGNAL ACQUISITION LOADING SCREEN --- */
+/* ======================================= */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-vox-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Ensure it covers everything */
+    opacity: 1;
+    transition: opacity 1.5s ease-out; /* Fade out transition */
+}
+
+/* Static Effect (Red/Black Repeating Lines) */
+.signal-fail {
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.2), 
+        rgba(255, 0, 0, 0.2) 2px,
+        #000000 2px,
+        #000000 4px
+    );
+}
+
+.loading-logo {
+    font-size: 5em;
+    color: var(--color-vox-red);
+    animation: flicker 0.5s infinite alternate; /* Reuse existing flicker keyframe */
+}
