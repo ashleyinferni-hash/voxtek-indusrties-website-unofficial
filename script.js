@@ -96,3 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // unless they also rely on the document being ready.
     
 });
+// --- SIGNAL ACQUISITION FADE OUT ---
+
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        // Set opacity to 0 to trigger the CSS transition
+        loadingScreen.style.opacity = '0';
+        
+        // Remove the element from the DOM after the transition finishes
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 1500); // 1500ms matches the CSS transition time
+    }
+});
