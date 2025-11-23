@@ -555,3 +555,18 @@ input, textarea {
     color: var(--color-vox-red);
     animation: flicker 0.5s infinite alternate; /* Reuse existing flicker keyframe */
 }
+/* --- Custom Cursor for Surveillance Effect --- */
+body {
+    /* 1. Use the custom image data */
+    cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAZUlEQVRYhe2WsQqAMAwE7/L/f+S6iWqIokqVpG24I5Y33gU8WJtNhz1rCgWcI9hM+F2jYQh+GgYQhOCn/eQoVj5eQoVg4Cglj5eQoVpGgYk+WkaR0n4k/OglzX/tXWd47DPAAAAAElFTkSuQmCC') 16 16, pointer; 
+    
+    /* 2. IMPORTANT: The '16 16' are the X and Y coordinates of the hotspot (center of 32x32 image) */
+    /* 3. The 'pointer' is the final, ultimate fallback. */
+}
+
+/* Ensure interactive elements still show a pointer for usability */
+a:hover, button:hover, .cta-button:hover, 
+input:hover, select:hover, textarea:hover {
+    /* Use the standard pointer for interactive elements */
+    cursor: pointer; 
+}
