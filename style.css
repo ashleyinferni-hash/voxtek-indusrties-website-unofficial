@@ -1,0 +1,335 @@
+/* --- Global VoxTek Variables & Reset --- */
+:root {
+    --color-vox-blue: #00e0ff; /* Neon Cyan/Blue */
+    --color-vox-red: #ff3333;   /* High-contrast Red */
+    --color-vox-dark: #111111;  /* Near-black background */
+    --color-text-light: #f0f0f0; /* Off-white text */
+    --font-digital: 'Roboto Mono', monospace; /* Digital/Techy Font */
+    --font-display: 'Oswald', sans-serif; /* Bold Headline Font */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Body and Global Layout --- */
+.vox-bg {
+    font-family: var(--font-digital);
+    background-color: var(--color-vox-dark);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    padding-top: 80px; /* Space for fixed header */
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Typography and Headings --- */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    color: var(--color-vox-blue);
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 224, 255, 0.7); /* Neon glow effect */
+}
+
+h2.page-title {
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--color-vox-red);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* --- Header and Navigation --- */
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent background */
+    border-bottom: 2px solid var(--color-vox-red);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-vox-red);
+}
+
+.header-nav nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.header-nav nav a:hover,
+.header-nav nav .nav-active {
+    color: var(--color-vox-dark);
+    background-color: var(--color-vox-blue);
+    border: 1px solid var(--color-vox-blue);
+    text-shadow: none;
+}
+
+/* --- Buttons and Calls-to-Action (CTAs) --- */
+.cta-button, .submit-button, .voxtek-official-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--color-vox-red);
+    color: var(--color-text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid var(--color-vox-red);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cta-button:hover, .submit-button:hover, .voxtek-official-link:hover {
+    background-color: var(--color-vox-dark);
+    color: var(--color-vox-red);
+    border-color: var(--color-vox-red);
+    box-shadow: 0 0 10px var(--color-vox-red);
+}
+
+.voxtek-official-link {
+    background-color: var(--color-vox-blue);
+    border-color: var(--color-vox-blue);
+}
+
+.voxtek-official-link:hover {
+    background-color: var(--color-vox-dark);
+    color: var(--color-vox-blue);
+    border-color: var(--color-vox-blue);
+    box-shadow: 0 0 10px var(--color-vox-blue);
+}
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px dashed var(--color-vox-blue);
+    margin-top: 50px;
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* ======================================= */
+/* --- 1. Home Page Specific Designs --- */
+/* ======================================= */
+
+#hero-broadcast {
+    text-align: center;
+    padding: 60px 0;
+    background-color: rgba(17, 17, 17, 0.7);
+    border: 1px solid var(--color-vox-blue);
+}
+
+.news-ticker {
+    background-color: var(--color-vox-red);
+    color: var(--color-vox-dark);
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+    /* This section would use an animation keyframe for scrolling text in production */
+}
+
+.news-ticker p {
+    font-weight: 900;
+    letter-spacing: 2px;
+    animation: ticker-move 15s linear infinite; /* Placeholder for animation */
+}
+
+@keyframes ticker-move {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.vox-populi-image figcaption {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--color-vox-blue);
+    text-shadow: 0 0 8px var(--color-vox-blue);
+}
+
+.vox-quote {
+    border-left: 5px solid var(--color-vox-red);
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+}
+
+.program-card {
+    background-color: #222;
+    padding: 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ======================================= */
+/* --- 2. The Vees Page Specific Designs --- */
+/* ======================================= */
+
+.vees-triptych {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.vee-panel {
+    flex: 1;
+    padding: 30px;
+    border: 1px dashed var(--color-text-light);
+    text-align: center;
+}
+
+#panel-vox { 
+    background-color: rgba(0, 224, 255, 0.1); 
+    border-color: var(--color-vox-blue);
+}
+#panel-valentino { 
+    background-color: rgba(255, 51, 51, 0.1); 
+    border-color: var(--color-vox-red);
+}
+#panel-velvette { 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-color: var(--color-text-light); 
+}
+
+.vee-panel h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* ======================================= */
+/* --- 3. Rivalry Page Specific Designs --- */
+/* ======================================= */
+
+.static-page {
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-vox-dark),
+        var(--color-vox-dark) 5px,
+        #222 5px,
+        #222 10px
+    ); /* Subtle background static pattern */
+}
+
+.error-title {
+    color: var(--color-vox-red);
+    text-align: center;
+    font-size: 3em;
+    animation: flicker 1s infinite alternate; /* The famous flicker/glitch effect */
+}
+
+@keyframes flicker {
+    0%   { opacity: 1; }
+    40%  { opacity: 1; }
+    42%  { opacity: 0.8; }
+    43%  { opacity: 1; }
+    45%  { opacity: 0.6; }
+    46%  { opacity: 1; }
+    99%  { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+.signal-icon {
+    font-size: 1.8em;
+    color: var(--color-text-light);
+    background-color: var(--color-vox-red);
+    padding: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    border: 3px solid var(--color-text-light);
+}
+
+.glitch-text {
+    /* Use text-shadow to simulate RGB split or color fringing found in static/glitches */
+    text-shadow: 1px 0 0 var(--color-vox-red), -1px 0 0 var(--color-vox-blue);
+    margin-bottom: 20px;
+}
+
+.poll-form {
+    background-color: #0d0d0d;
+    padding: 20px;
+    border: 2px solid var(--color-vox-blue);
+    margin-top: 20px;
+}
+
+.poll-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* ======================================= */
+/* --- 4. Compliance Page Specific Designs --- */
+/* ======================================= */
+
+.corporate-page .main-content {
+    background-color: #080808; /* Slightly darker to feel serious */
+    padding: 40px;
+    border-left: 5px solid var(--color-vox-blue);
+}
+
+.rules-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+.rules-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #333;
+}
+
+.rules-list li:last-child {
+    border-bottom: none;
+    color: var(--color-vox-red); /* Highlight the threat */
+}
+
+.fine-print {
+    margin-top: 15px;
+    font-size: 0.75em;
+    color: #777;
+    font-style: italic;
+}
+
+/* Form Styles */
+.report-form label {
+    display: block;
+    margin-top: 15px;
+    color: var(--color-vox-blue);
+    font-weight: bold;
+}
+
+.report-form select, 
+.report-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #222;
+    border: 1px solid var(--color-vox-blue);
+    color: var(--color-text-light);
+    font-family: var(--font-digital);
+}
