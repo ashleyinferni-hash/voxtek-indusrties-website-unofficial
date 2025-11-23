@@ -555,18 +555,18 @@ input, textarea {
     color: var(--color-vox-red);
     animation: flicker 0.5s infinite alternate; /* Reuse existing flicker keyframe */
 }
-/* --- Force the Cursor to Appear --- */
+/* --- Final Custom Cursor Implementation --- */
 .vox-bg, body {
-    /* ... (other body styles) ... */
-    
-    /* FORCE THE CURSOR PROPERTY */
-    cursor: wait !important; 
+    /* Uses the reticle image for the general page area */
+    cursor: url('reticle.png') 16 16, wait; 
 }
 
-/* Keep the interactive cursor pointer */
+/* --- THE FIX: Force the custom image onto all interactive elements --- */
 a:hover, button:hover, .cta-button:hover, 
 input:hover, select:hover, textarea:hover {
-    cursor: pointer; 
+    /* Use the same custom image, but add 'pointer' as the fallback type. */
+    cursor: url('reticle.png') 16 16, pointer; 
+} 
 }
 /* ======================================= */
 /* --- AGGRESSIVE CURSOR FIX --- */
