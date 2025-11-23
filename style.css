@@ -538,50 +538,6 @@ input, textarea {
     opacity: 1;
     transition: opacity 1.5s ease-out; /* Fade out transition */
 }
-
-/* --- Custom Cursor Image URL (Ensure this path is correct!) --- */
-/* Example Path: url('reticle.png') 16 16 */
-/* Replace 'url(...)' with your actual image path/filename. */
-:root {
-    /* Define the custom cursor URL as a CSS variable for easy reuse */
-    --cursor-reticle: url('reticle.cur') 16 16, wait; 
-    --cursor-reticle-pointer: url('reticle.cur') 16 16, pointer;
-}
-
-/* 1. Apply Reticle to the entire body */
-.vox-bg, body {
-    cursor: var(--cursor-reticle);
-}
-
-/* 2. THE OVERRIDE FIX: Apply the Reticle to ALL elements when they are interactive */
-/* We target EVERYTHING (*) on the page when hovering, and ensure the reticle is used. */
-*:hover {
-    /* Set the cursor to the Reticle for all hover states */
-    cursor: var(--cursor-reticle); 
-}
-
-/* 3. EXCEPTION: Force the hand icon to use the Reticle image */
-a:hover, 
-button:hover, 
-.cta-button:hover, 
-input[type="submit"]:hover, 
-input[type="button"]:hover {
-    /* Use the reticle, but fall back to the pointer type */
-    cursor: var(--cursor-reticle-pointer);
-}
-/* --- Final Custom Cursor Implementation --- */
-.vox-bg, body {
-    /* Uses the reticle image for the general page area */
-    cursor: url('reticle.cur') 16 16, wait; 
-}
-
-/* --- THE FIX: Force the custom image onto all interactive elements --- */
-a:hover, button:hover, .cta-button:hover, 
-input:hover, select:hover, textarea:hover {
-    /* Use the same custom image, but add 'pointer' as the fallback type. */
-    cursor: url('reticle.cur') 16 16, pointer; 
-} 
-}
 /* ======================================= */
 /* --- AGGRESSIVE CURSOR FIX --- */
 /* Forces full-screen overlays to allow cursor interaction */
