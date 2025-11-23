@@ -7,7 +7,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="description" content="VOXTEK: The only true source of digital media, entertainment, and propaganda in Hell. Log on. Obey.">
-<meta name="keywords" content="Vox, Hazbin Hotel, The Vees, Valentino, Velvette, Propaganda, Media, Hell">
+    <meta name="keywords" content="Vox, Hazbin Hotel, The Vees, Valentino, Velvette, Propaganda, Media, Hell">
+    <style>
+        /* CSS for the secret link */
+        /* Assuming .header-nav is position: relative; if not, you may need to add it to your style.css */
+        .header-nav {
+            position: relative; /* Ensure the link is positioned relative to the header */
+        }
+        
+        .secret-glitch-link {
+            position: absolute;
+            /* Positioned to cover the logo area */
+            top: 0;
+            left: 0;
+            width: 200px; /* Make it wide enough to cover the logo and a bit more */
+            height: 100%; /* Cover the entire height of the header area */
+            background: rgba(255, 0, 0, 0); /* Invisible background */
+            z-index: 1000; /* Ensure it's clickable above the logo */
+            cursor: pointer;
+            /* Visual hint: slight static flicker effect to suggest signal breakdown */
+            animation: subtle-glitch 5s infinite; 
+        }
+
+        /* Glitch animation for the subtle hint */
+        @keyframes subtle-glitch {
+            0%, 99% { opacity: 0; } /* Invisible most of the time */
+            99.5% { opacity: 0.9; background: rgba(255, 255, 0, 0.2); transform: translate(1px, 0); } /* Brief, colored flicker */
+            100% { opacity: 0; }
+        }
+    </style>
 </head>
 <body class="vox-bg">
     <div id="scanline-overlay"></div>
@@ -16,6 +44,9 @@
     <p>...Acquiring Signal. Stand By. Obedience is Loading...</p>
 </div>
     <header class="header-nav">
+        <!-- SECRET GLITCH LINK: Positioned over the logo -->
+        <a href="glitch.html" class="secret-glitch-link" title="Flicker"></a>
+        
         <h1 class="logo">📺 VOXTEK</h1>
         <nav>
             <a href="index.html" class="nav-active">Home Broadcast</a>
