@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+**<?xml-stylesheet type="text/xsl" href="rss.xsl"?>**
+<rss version="2.0">
+  <channel>
+    <title>...</title>
+    ```
+
+### ✨ Step 3: Test It
+
+Now, when you visit your feed URL (`.../feed.xml`) in your browser, the browser will read the instruction in the second line, grab the `rss.xsl` file, and use it to transform the raw data into a nicely formatted web page!
+
+This provides basic styling. You can customize the CSS inside the `<style>` tags of the `rss.xsl` file to match your website's colors and fonts!
+
+Would you like me to help you customize the colors in the `rss.xsl` file to something different?
 <rss version="2.0">
   <channel>
     <title>Vox Newsfeed: Tune In. Log On. Obey.</title>
