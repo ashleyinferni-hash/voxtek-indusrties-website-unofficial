@@ -1,40 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+/* feed-style.css */
 
-  <xsl:output method="html"/>
-
-  <xsl:template match="/">
-    <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-    <html>
-    <head>
-      <title><xsl:value-of select="rss/channel/title"/></title>
-      <style>
-        /* VOXTEK STYLES */
-        body { 
-          font-family: 'Consolas', 'Courier New', monospace; 
-          margin: 20px; 
-          background-color: #000; /* Black background */
-          color: #fff; /* White text */
-          line-height: 1.6;
-        }
-        h1 { 
-          color: #ff0000; /* Bright Red Accent */
-          border-bottom: 2px solid #ff0000; 
-          padding-bottom: 5px; 
-          text-transform: uppercase;
-        }
-        .feed-description { 
-          margin-bottom: 25px; 
-          font-style: italic; 
-          color: #aaa; /* Lighter white for secondary text */
-        }
-        .item { 
-          border: 1px solid #ff0000; /* Red border for items */
-          padding: 15px; 
-          margin-bottom: 20px; 
-          background-color: #111; /* Very dark gray for boxes */
-          box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */
+/* VOXTEK STYLES */
+body { 
+  font-family: 'Consolas', 'Courier New', monospace; 
+  margin: 20px; 
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  line-height: 1.6;
+}
+h1 { 
+  color: #ff0000; /* Bright Red Accent */
+  border-bottom: 2px solid #ff0000; 
+  padding-bottom: 5px; 
+  text-transform: uppercase;
+}
+.feed-description { 
+  margin-bottom: 25px; 
+  font-style: italic; 
+  color: #aaa; /* Lighter white for secondary text */
+}
+.item { 
+  border: 1px solid #ff0000; /* Red border for items */
+  padding: 15px; 
+  margin-bottom: 20px; 
+  background-color: #111; /* Very dark gray for boxes */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */
+  border-radius: 0; /* Sharp corners */
+}
+.item h2 a { 
+  color: #ffaa00; /* Orange/Yellow for links (digital glow effect) */
+  text-decoration: none; 
+  font-size: 1.5em;
+}
+.item h2 a:hover { 
+  text-decoration: underline; 
+  color: #fff; /* White on hover */
+}
+.item-date { 
+  color: #00ff00; /* Green for date (terminal/broadcast status color) */
+  font-size: 0.9em; 
+  margin-top: 5px; 
+  text-transform: uppercase;
+}
+.item-desc { 
+  margin-top: 15px; 
+  color: #eee;
+}          box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Subtle red glow */
           border-radius: 0; /* Sharp corners */
         }
         .item h2 a { 
