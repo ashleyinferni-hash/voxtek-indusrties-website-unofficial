@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0">
+  <channel>
+    <title>Vox Newsfeed: Tune In. Log On. Obey.</title>
+    <link>https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html</link>
+    <description>Unfiltered, unbiased, and 100% VoxTek approved. This is the truth, delivered digitally.</description>
+    <language>en-us</language>
+    <pubDate>Sun, 30 Nov 2025 22:00:00 GMT</pubDate>
+    <generator>Gemini AI RSS Creator</generator>
+
+    <item>
+      <title>🔥 BREAKING REPORT: VoxTek Stock Hits All-Time High</title>
+      <link>https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html</link>
+      <description>The archaic market systems of Hell are being shattered by digital dominance. Analysts confirm that investing in any non-VoxTek venture is financially stupid. Don't be stupid.</description>
+      <pubDate>Sun, 23 Nov 2025 12:00:00 GMT</pubDate>
+      <guid isPermaLink="false">https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html?item=stock-high-20251123</guid>
+    </item>
+
+    <item>
+      <title>✨ Style Watch: Velvette Vindicates V-Neck Victory</title>
+      <link>https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html</link>
+      <description>Our Overlord of Aesthetics has declared that everything before 2020 is irrelevant. Throw out your antique suits. If it's not trending on Velvette's feed, it's garbage.</description>
+      <pubDate>Sat, 22 Nov 2025 12:00:00 GMT</pubDate>
+      <guid isPermaLink="false">https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html?item=vneck-victory-20251122</guid>
+    </item>
+    
+    <item>
+      <title>🚨 BREAKING: Mandatory Compliance Update Issued to All Citizens</title>
+      <link>https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html</link>
+      <description>VOXTEK CEO Vox, alongside Valentino (Sinema) and Velvette (Fashion), announced a sweeping new update to the city's mandatory compliance protocols. The update, dubbed **'Obedience Patch 1.3.4'**, addresses several "system vulnerabilities" that have allowed independent thought and free will to circulate among the population. Resistance is inefficient and will be instantly patched out. Stay logged on.</description>
+      <pubDate>Fri, 21 Nov 2025 12:00:00 GMT</pubDate> 
+      <guid isPermaLink="false">https://ashleyinferni-hash.github.io/voxtek-indusrties-website-unofficial/news.html?item=compliance-update-20251121</guid>
+    </item>
+
+  </channel>
+</rss>
